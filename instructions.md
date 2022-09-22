@@ -55,7 +55,7 @@ Backend specification for the login form to work :
 
 The login form must send a `POST` request to the url `/register`, with the following data:
 
-- `username=admin`
+- `username=admin@domain.com`
 - `password=rainbow`
 
 
