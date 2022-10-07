@@ -1,3 +1,5 @@
+@use '../assets/variables/variables.scss' as vars;
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -9,4 +11,78 @@ a {
     */
     text-decoration: inherit;
     color: inherit;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 75px;
+
+    .header-left-placeholder, 
+    .header-right-placeholder {
+        flex-grow: 1;
+    }
+}
+
+.header-content {
+    display: flex;
+    width: 1070px;
+    justify-content: flex-start ;
+    align-items: center;
+
+    .logo {
+        padding-top: 10px;
+        padding-right: 10px;
+        img{
+            width: 180px;
+        }
+    }
+
+    .header-tabs{
+        display: flex;
+        .tabs-item {
+            flex-grow: 1;
+            font-size: 14px;
+            margin: auto;
+            font-weight: 600;
+            a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            :hover{
+                background-color: vars.$link-gray;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    .account-buttons{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+        .account-item {
+            margin-left: 20px;
+            
+            a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                background-color: vars.$green;
+                border-radius: 30px;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }    
+}
+
+.body-page{
+    background-color: vars.$background-gray;
 }
