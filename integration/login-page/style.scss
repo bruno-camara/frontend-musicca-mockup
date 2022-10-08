@@ -85,4 +85,37 @@ a {
 
 .body-page{
     background-color: vars.$background-gray;
+    display: flex;
+    .body-leftplaceholder, .body-rightplaceholder{
+        flex-grow: 1;
+        background-color: vars.$background-gray;
+    }
+
+    .login{
+        background-color: white;
+        flex-basis: 570px;
+        padding-top: 67px;
+        padding-bottom: 60px;
+        padding-left: 60px;
+
+        .login-form{
+            .box-email{
+                width: 450px;
+                height: 45px;
+            }
+
+            .box-password{
+                width: 450px;
+                height: 45px;
+            }
+
+            .submit{
+                width: 450px;
+                height: 42px;
+                background-color: vars.$green;
+                color: white;
+                font-size: 14px;
+            }
+        }
+    }
 }
