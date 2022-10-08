@@ -84,11 +84,18 @@ a {
 }
 
 .body-page{
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: vars.$background-gray;
     display: flex;
     .body-leftplaceholder, .body-rightplaceholder{
         flex-grow: 1;
         background-color: vars.$background-gray;
+    }
+
+    h1{
+        font-size: 32px;
+        font-weight: 300;
     }
 
     .login{
@@ -102,11 +109,30 @@ a {
             .box-email{
                 width: 450px;
                 height: 45px;
+
+                &:focus{
+                    outline-color: vars.$green;
+                }
+
+                &:invalid{
+                    outline-color: red;
+                }
             }
 
             .box-password{
                 width: 450px;
                 height: 45px;
+
+                &:focus{
+                    outline-color: vars.$green;
+                }
+            }
+            .box-email:invalid{
+                border-color: red;
+            }
+
+            &:valid{
+                border-color: vars.$green;
             }
 
             .submit{
@@ -115,6 +141,7 @@ a {
                 background-color: vars.$green;
                 color: white;
                 font-size: 14px;
+                border-radius: 30px;
             }
         }
     }
